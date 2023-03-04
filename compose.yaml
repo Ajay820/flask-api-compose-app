@@ -1,0 +1,9 @@
+services:
+  web:
+    build:
+      context: ./app
+      target: builder
+    # (default stop signal from compose is sigterm)
+    # stop_signal: SIGINT
+    ports:
+      - "8000:8000"
